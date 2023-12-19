@@ -12,7 +12,7 @@ public class Prog8 {
         System.out.println("String under operation "+a);
 
 
-        char ch[] = a.toCharArray();
+        char[] ch = a.toCharArray();
         int len = a.length();
 
         int v=0;
@@ -20,26 +20,31 @@ public class Prog8 {
         int ss=0;
 
         int i=0;
-        while(ch[i]<len){
-            if(ch[i]>='A' && ch[i]<='Z'){
-                if(ch[i]=='A'||ch[i]=='E'||ch[i]=='I'||ch[i]=='O'||ch[i]=='U') {
-                    System.out.println("Before v"+v);
+        while(i<len)
+        {
+            if(ch[i]>='A' && ch[i]<='Z')
+            {
+                if(ch[i]=='A'||ch[i]=='E'||ch[i]=='I'||ch[i]=='O'||ch[i]=='U')
+                {
+//                    System.out.println("Before v"+v);
                     ++v;
-                    System.out.println("After v"+v);
+//                    System.out.println("After v"+v);
                 }
-
                 else {
-                    System.out.println("Before c");
+//                    System.out.println("Before c");
                     ++c;
-                    System.out.println("After c");
+//                    System.out.println("After c");
                 }
             }
-            System.out.println("Before ss"+ss);
-            ++ss;
-            System.out.println("After ss"+ss);
-            System.out.println("i-before:-"+i);
-            ++i;
-            System.out.println("i-after:- "+i);
+             else {
+//                System.out.println("Before ss" + ss);
+                ++ss;
+//                System.out.println("After ss" + ss);
+//                System.out.println("i-before:-" + i);
+//                System.out.println("i-after:- " + i);
+            }
+                ++i;
+
         }
         System.out.println("Vowels:- "+v);
         System.out.println("Consonants:- "+c);
